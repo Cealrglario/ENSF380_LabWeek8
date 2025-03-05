@@ -22,19 +22,21 @@ public class ToDoList implements IToDoList {
     @Override
     public void completeTask(String task) {
         this.taskHistory.add(tasks);
-
+        this.tasks.get(Integer.parseInt(task)).setIsCompleted(true);
     }
 
     @Override
     public void deleteTask(String task) {
         this.taskHistory.add(tasks);
-        this.tasks.remove(task);
+        this.tasks.remove(Integer.parseInt(task));
     }
 
     @Override
     public void editTask(String task, String title, boolean isCompleted) {
         this.taskHistory.add(tasks);
-
+        this.tasks.get(Integer.parseInt(task)).setTitle(title);
+        this.tasks.get(Integer.parseInt(task)).setIsCompleted(isCompleted);
+        this.tasks.get(Integer.parseInt(task)).setID(task);
     }
 
     @Override
