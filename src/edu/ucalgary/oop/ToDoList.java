@@ -5,14 +5,17 @@ import java.util.List;
 import java.util.Stack;
 
 public class ToDoList implements IToDoList {
-    private List<Task> tasks = new ArrayList<>();
-    private Stack<List<Task>> taskHistory = new Stack<>();
+    private List<Task> tasks;
+    private Stack<List<Task>> taskHistory;
 
-    public ToDoList()
+    public ToDoList() {
+        this.tasks = new ArrayList<>();
+        this.taskHistory = new Stack<>();
+    }
 
     @Override
     public void addTask(Task task) {
-
+        this.taskHistory.add(tasks);
     }
 
     @Override
