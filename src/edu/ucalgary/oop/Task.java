@@ -16,7 +16,7 @@ public class Task implements Cloneable {
     public String getTitle() {
         return title ;
     }
-    public void setTitile(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
     public boolean getIsCompleted() {
@@ -27,8 +27,11 @@ public class Task implements Cloneable {
     }    
 
     public Object clone() throws CloneNotSupportedException {
-        Task copy = (Task)super.clone();
-        return copy;
+        try {
+            return (Task) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new CloneNotSupportedException("Clone not supported for this object.");
+        }
     }
 
     @Override
