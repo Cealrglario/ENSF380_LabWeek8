@@ -43,7 +43,7 @@ public class ToDoList implements IToDoList {
     }
 
     @Override
-    public ArrayList<Task> list() {
+    public ArrayList<Task> listTasks() {
         return null;
     }
 }
