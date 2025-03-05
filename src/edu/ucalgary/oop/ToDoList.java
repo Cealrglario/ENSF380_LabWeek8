@@ -16,26 +16,30 @@ public class ToDoList implements IToDoList {
     @Override
     public void addTask(Task task) {
         this.taskHistory.add(tasks);
+        this.tasks.add(task);
     }
 
     @Override
-    public void completeTask(Task task) {
+    public void completeTask(String task) {
+        this.taskHistory.add(tasks);
 
     }
 
     @Override
-    public void deleteTask(Task task) {
-
+    public void deleteTask(String task) {
+        this.taskHistory.add(tasks);
+        this.tasks.remove(task);
     }
 
     @Override
-    public void editTask(Task task) {
+    public void editTask(String task, String title, boolean isCompleted) {
+        this.taskHistory.add(tasks);
 
     }
 
     @Override
     public void undo() {
-
+        this.tasks = taskHistory.pop();
     }
 
     @Override
