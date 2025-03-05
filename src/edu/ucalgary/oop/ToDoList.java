@@ -8,24 +8,25 @@ public class ToDoList implements IToDoList {
     private List<Task> tasks = new ArrayList<>();
     private Stack<List<Task>> taskHistory = new Stack<>();
 
+    public ToDoList()
 
     @Override
-    public void add(Task task) {
+    public void addTask(Task task) {
 
     }
 
     @Override
-    public void complete(Task task) {
+    public void completeTask(Task task) {
 
     }
 
     @Override
-    public void delete(Task task) {
+    public void deleteTask(Task task) {
 
     }
 
     @Override
-    public void edit(Task task) {
+    public void editTask(Task task) {
 
     }
 
